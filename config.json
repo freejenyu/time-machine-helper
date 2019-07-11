@@ -1,0 +1,8 @@
+{	
+    "log": "~/.TimeMachineHelper.log",
+    "host": "ld-pc",
+    "shareDir": "Data",
+    "imagePath": "Time Mathine/TimeMachine.sparsebundle", 
+    "imageName": "TimeMachine", 
+    "interval": 7200
+}

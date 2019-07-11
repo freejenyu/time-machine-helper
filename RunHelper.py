@@ -1,17 +1,24 @@
 # question: how to read arguments from json file?
 
-import subprocess
 import os
-import time
+import sys
+import subprocess
 from datetime import datetime
-host = 'ld-pc'
-shared_dir = 'Data'
-imagePath = 'Time Mathine/TimeMachine.sparsebundle'
-# the name defined when creating the image file 'TimeMachine.sparsebundle' is the name for the image that will be present in '/volumes'.
-imageName = 'TimeMachine'
+import time
+import json
+
+config = {}
+filename = os.path.dirname(sys.argv[0]) + '/config.json'
+with open(filename, 'r', encoding='utf-8') as f_obj:
+    config = json.load(f_obj)
+
+log = os.path.expanduser(config['log'])
+host = config['host']
+shared_dir = config['shareDir']
+imagePath = config['imagePath']
+imageName = config['imageName']
+interval = 7200
 path = '/Volumes/' + shared_dir + '/' + imagePath
-interval = 600
-log = os.path.expanduser('~/.TimeMachineHelper.log')
 
 
 def isHostOn(host: str):
@@ -25,10 +32,10 @@ def isHostOn(host: str):
         f_obj = open(log, 'x', encoding='utf-8')
     if yesOrNo:
         f_obj.write(str(datetime.now()) + ',' + ' stdout: ' + stdout.decode().rstrip() +
-                    ', ' + 'host ' + '"' + host + '"' + ' is already active!')
+                    ', ' + 'host ' + '"' + host + '"' + ' is already active!\n')
     else:
         f_obj.write(str(datetime.now()) + ',' + ' stdout: ' + stdout.decode().rstrip() +
-                    ', ' + 'host ' + '"' + host + '"' + ' is currently inactive!')
+                    ', ' + 'host ' + '"' + host + '"' + ' is currently inactive!\n')
     f_obj.close()
     return yesOrNo
 
@@ -84,19 +91,21 @@ def sayWellDone():
 
 
 def main():
-    if isHostOn(host):
-        if isSharedDirMounted(shared_dir):
-            if isImageMounted(imageName):
-                sayWellDone()
-                pass
+    while True:
+        if isHostOn(host):
+            if isSharedDirMounted(shared_dir):
+                if isImageMounted(imageName):
+                    sayWellDone()
+                    pass
+                else:
+                    mountImage(path)
             else:
+                mountSharedDir(host, shared_dir)
+                time.sleep(15)
                 mountImage(path)
-        else:
-            mountSharedDir(host, shared_dir)
-            mountImage(path)
+        time.sleep(interval)
 
 
 if __name__ == "__main__":
     while True:
         main()
-        time.sleep(interval)
