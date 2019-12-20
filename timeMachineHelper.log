@@ -1,0 +1,16 @@
+2019-12-20 07:25:56 Got response from 192.168.8.112, IP address of lqw-pc: 192.168.8.112
+2019-12-20 07:25:59 Failed to mount 'Data'!
+2019-12-20 07:27:43 Got response from 192.168.8.112, IP address of lqw-pc: 192.168.8.112
+2019-12-20 07:27:45 Failed to mount 'Data'!
+2019-12-20 07:29:39 Got response from 192.168.8.112, IP address of lqw-pc: 192.168.8.112
+2019-12-20 07:29:45 Successfully mounted 'Data'!
+2019-12-20 08:02:27 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:02:48 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:03:09 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:03:31 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:03:52 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:04:13 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:04:34 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:04:55 smbutil: unable to resolve lqw-pc: No route to host, 2019-12-20 08:05:36 smbutil: unable to resolve lqw-pc: No route to host 2019-12-20 08:05:56 Got response from 192.168.8.112 IP address of lqw-pc: 192.168.8.112
+2019-12-20 08:06:18 Successfully mounted 'Data'!
+2019-12-20 08:26:56 Got response from 192.168.8.112 IP address of lqw-pc: 192.168.8.112
+2019-12-20 08:27:02 Successfully mounted 'Data'!
+2019-12-20 08:34:08 smbutil: unable to resolve lqw-pc: No route to host 2019-12-20 08:34:28 Got response from 192.168.8.112 IP address of lqw-pc: 192.168.8.112
+2019-12-20 08:34:29 Successfully mounted 'Data'!
+2019-12-20 09:22:33 Got response from 192.168.8.112 IP address of lqw-pc: 192.168.8.112
+TimeMachine is ready, well done!
+2019-12-20 09:28:53 Got response from 192.168.8.112 IP address of lqw-pc: 192.168.8.112
+2019-12-20 09:28:54 TimeMachine is ready, well done!

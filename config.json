@@ -1,8 +1,8 @@
-{	
-    "log": "~/.TimeMachineHelper.log",
-    "host": "ld-pc",
-    "shareDir": "Data",
-    "imagePath": "Time Mathine/TimeMachine.sparsebundle", 
-    "imageName": "TimeMachine", 
+{
+    "log": "~/Applications/timeMachineHelper/timeMachineHelper.log",
+    "host": "lqw-pc",
+    "share": "Data",
+    "imageFilename": "TimeMachine.dmg",
+    "imageName": "TimeMachine",
     "interval": 7200
 }
